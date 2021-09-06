@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/footer/style.css">
+  <link rel="stylesheet" href="./css/header/style.css">
+  <link rel="stylesheet" href="./css/modals/style.css">
+
+  <script src="https://kit.fontawesome.com/8e41bdd404.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;600&display=swap" rel="stylesheet"> 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Convergence&family=Lato:wght@300;400;700;900&family=Mukta:wght@300;400;600;700;800&family=Noto+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Convergence&display=swap" rel="stylesheet">
+  <title>Index</title>
+</head>
+
+<body>
+  <section>
+    {{>header}}
+    <form action="#">
+      <div class="input1">
+        <div class="form">
+          <div class="hero">
+            <input type="text" id="trackName" class="form_input" autocomplete="off" placeholder="">
+            <label for="trackName" class="form_label">Track</label>
+          </div>
+        </div>
+      </div>
+      <div class="input2">
+        <div class="form">
+          <input type="text" id="artistName" class="form_input" autocomplete="off" placeholder="">
+          <label for="artistName" class="form_label">Artist</label>
+        </div>
+      </div>
+      <div class="button">
+        <button type="button" class="btn-6" data-modal-target="#modal" ><span>gimme!</span></button>
+      </div>
+    </form>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">
+          <div class="track-name">Love Yourself</div>
+          <div class="artist-name">Justin Bieber</div>
+        </div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+          <div class="lyrics-body">
+            {{!-- For all the times that you rain on my parade <br>
+And all the clubs you get in using my name <br>
+You think you broke my heart, oh girl for goodness sake <br>
+You think I'm crying on my own, well I ain't <br>
+And I didn't wanna write a song <br>
+Cause I didn't want anyone thinking I still care <br>
+I don't but, you still hit my phone up <br>
+And baby I be movin' on <br>
+And I think you should be somethin' <br>
+I don't wanna hold back, maybe you should know that <br>
+My mama don't like you and she likes everyone <br>
+And I never like to admit that I was wrong <br>
+And I've been so caught up in my job, didn't see what's going on <br>
+But now I know, I'm better sleeping on my own <br> --}}
+          </div>
+          <div class="gif">
+            <!-- <img src="https://assets.teenvogue.com/photos/565603a7d33d44f510153b26/master/w_400%2Cc_limit/1.gif"
+              alt=""> -->
+          </div>
+      </div>
+    </div>
+    <div id="overlay"></div>
+  </section>
+  {{>footer}}
+  <script src="/js/app.js"></script>
+</body>
+</html>

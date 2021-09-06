@@ -1,0 +1,26 @@
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(90deg, #ecf0ff 50%, #ffffff 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100vh;
+}
+
+.about {
+ border: 5px solid #6584ff; 
+ border-radius: 0.5rem;
+ text-align: justify;
+ padding: 1.25rem;
+ font-family: 'Roboto', sans-serif;
+ width: 700px;
+ max-width: 70%;
+ max-height: 80%;
+}

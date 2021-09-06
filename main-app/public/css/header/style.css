@@ -1,0 +1,32 @@
+@import "styles.css";
+@import "footer/style.css";
+
+header{
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-left: 6.25rem;
+  padding-right: 7.813rem;
+}
+
+header .title-span{
+  padding: 0;
+  margin: 0;
+  font-family: "poppins",sans-serif;
+  font-size: 3rem;
+  line-height: 50px;
+  font-weight: 900;
+  color: #2841A3;
+}
+
+header .about-span{
+  padding: 0;
+  margin: 0;
+  font-family: "poppins",sans-serif;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}

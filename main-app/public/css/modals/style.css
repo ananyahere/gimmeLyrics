@@ -1,0 +1,106 @@
+@import "styles.css";
+@import "header/style.css";
+@import "footer/style.css";
+
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 300ms ease-in-out;
+  border: 2px solid #2841a3;
+  border-radius: 10px;
+  z-index: 10;
+  background: linear-gradient(90deg, #ecf0ff 50%, #ffffff 50%);
+  width: 80%;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.modal-header .title {
+  font-weight: bold;
+  width:  90%;
+
+}
+
+.modal-header .title .track-name{
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #2841a3;
+}
+.modal-header .title .artist-name{
+ font-size: 1rem;
+ font-family: 'Poppins', sans-serif;
+ font-weight: 400;
+ color: #2841a3;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
+.modal-body{
+  display: flex;
+  flex-direction: row;
+  height: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+
+.modal-body .lyrics-body{
+  padding: 10px 15px;
+  text-align: justify;
+  width: 50%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.modal-body .gif{
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body .gif > img{
+  height: 50%;
+  width: 50%;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 300ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
