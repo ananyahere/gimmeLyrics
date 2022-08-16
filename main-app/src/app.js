@@ -40,6 +40,7 @@ app.get("/lyrics", (req, res) => {
       if (error) return { error };
 
       lyrics.getLyrics(trackid, (error, { lyrics_body } = {}) => {
+        console.log("getLyric called!")
         if (error) return { error };
 
         getGIF(artistName, (error, { URLtoGIF } = {}) => {

@@ -1,6 +1,6 @@
 const request = require("request");
 
-const getGIF = (artistName, callback) => {
+const getGIF = (artistName = "404", callback) => {
   const api_key = process.env.GIPHY_API_KEY;
   const url = `https://api.giphy.com/v1/gifs/random?tag=${artistName}&api_key=${api_key}`;
   request({ url: url, json: true }, (err, res) => {

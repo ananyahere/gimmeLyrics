@@ -9,6 +9,7 @@ const artistNameDiv = document.querySelector(".artist-name")
 
 
 function openModal(modal, lyrics_body, artistName, trackName) {
+  console.log(lyrics_body, artistName, trackName)
   if (modal == null) return;
   modal.classList.add("active");
   overlay.classList.add("active");
@@ -20,15 +21,29 @@ function openModal(modal, lyrics_body, artistName, trackName) {
   if (lyricsBody == ''){
     lyricsBodyDiv.innerHTML = 'lyrics are unavaliable.'
   }
+  
   else{
     lyricsBodyDiv.innerHTML = lyricsBody
   }
-// Artist 
-  artistNameDiv.innerHTML = ""
-  artistNameDiv.innerHTML = artistName
-//Track 
-  trackNameDiv.innerHTML = ""
-  trackNameDiv.innerHTML = trackName
+  if(artistName==""){
+    artistNameDiv.innerHTML = 'Unavaliable.'
+  }
+   // Artist
+  else{
+    artistNameDiv.innerHTML = artistName
+  }
+  //Track
+  if(trackName==""){
+    trackNameDiv.innerHTML = 'Unavaliable.'
+  }else{
+    trackNameDiv.innerHTML = trackName
+  }
+
+  
+ 
+ 
+  
+ 
 }
 
 function closeModal(modal) {
